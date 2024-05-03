@@ -1,3 +1,5 @@
-console.log("Hello there");
+import './style.css';
+import dropdownMaker from "./dropdown-module";
 
-alert("Hello?");
+
+dropdownMaker(document.querySelector('.dropdown-content'));
