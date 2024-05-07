@@ -1,17 +1,12 @@
 export default function dropdownMaker(anchor, dropBtn) {
     const anchorGrbbr = anchor;
+    const btnAnchorGrbbr = dropBtn;
 
-    //sample code for dom children array
-    function getDomChildrenAsArray(element) {
-        const children = element.children;
-        const childrenArray = [];
-        for (let i = 0; i < children.length; i++) {
-          childrenArray.push(children[i]);
-        }
-        return childrenArray;
-      }
-      
-      const childrenArray = getDomChildrenAsArray(anchor);
+    anchorGrbbr.style.display = "none";
 
-      console.log(childrenArray);
+    btnAnchorGrbbr.addEventListener("click", (y) => {
+      const x = document.querySelector(".dropdown-content");
+
+      x.style.display = x.style.display == "none" ? "block" : "none";
+    });
 }
